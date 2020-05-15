@@ -1,0 +1,24 @@
+{
+  "name": "uts_pemrogweb",
+  "version": "1.0.0",
+  "description": "uts pemrograman web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MathiasPurwoko/UTS_PEMROGWEB.git"
+  },
+  "keywords": [
+    "uts",
+    "pemrog",
+    "web"
+  ],
+  "author": "matias purwoko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MathiasPurwoko/UTS_PEMROGWEB/issues"
+  },
+  "homepage": "https://github.com/MathiasPurwoko/UTS_PEMROGWEB#readme"
+}
