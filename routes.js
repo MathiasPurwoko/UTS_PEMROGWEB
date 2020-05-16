@@ -27,4 +27,6 @@ module.exports = function(app) {
     app.route('/ubahmontir')
         .put(jsonku.ubahMontir);
  
+    app.route('/ubahsparepart')
+        .put(jsonku.ubahSparepart);
 } 
