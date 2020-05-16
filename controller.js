@@ -18,3 +18,14 @@ exports.tampilsemuamontir = function(req, res){
         }
     });
 };
+//menampilkan semua data sparepart
+exports.tampilsemuasparepart = function(req, res){
+    connection.query('SELECT * FROM t_sparepart', function(error, rows, fields){
+        if(error){
+            console.log(error);
+
+        } else {
+            response.ok(rows, res)
+        }
+    });
+}; 
