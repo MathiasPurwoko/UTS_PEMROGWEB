@@ -71,3 +71,20 @@ exports.tambahMontir = function(req, res){
             }  
         });
 };
+
+//menambahkan data sparepart
+exports.tambahSparepart = function(req, res){
+    var nama_sparepart = req.body.nama_sparepart;
+    var harga_sparepart = req.body.harga_sparepart;
+    var satuan = req.body.satuan;
+
+    connection.query('INSERT INTO t_sparepart (nama_sparepart,harga_sparepart,satuan) VALUES(?,?,?)',
+        [nama_sparepart, harga_sparepart, satuan],
+        function (error, rows, fields){
+            if(error) {
+                console.log(error);
+            } else {
+                response.ok("berhasil menambahkan data!",res)
+            }  
+        });
+};
