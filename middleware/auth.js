@@ -257,3 +257,19 @@ exports.hapussparepart = function (req, res) {
             }
         });
 };
+
+//menghapus data di tabel montir
+exports.hapusmontir = function (req, res) {
+    var id_montir = req.body.id_montir;    
+
+    connection.query('DELETE FROM t_montir WHERE id_montir=?',
+    [id_montir],
+
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Data Montir Berhasil Dihapus", res);
+            }
+        });
+};
