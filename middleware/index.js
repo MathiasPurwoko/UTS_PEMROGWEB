@@ -21,5 +21,6 @@ router.post('/api/v1/inputuser',verifikasi(), auth.registrasi);
 
 
 router.put('/api/v1/ubahmontir',verifikasiadmin(), auth.ubahmontir);
+router.put('/api/v1/ubahsparepart',verifikasiadmin(), auth.ubahsparepart);
 
 module.exports = router;
