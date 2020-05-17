@@ -273,3 +273,20 @@ exports.hapusmontir = function (req, res) {
             }
         });
 };
+
+//menghapus data di tabel level
+exports.hapuslevel = function (req, res) {
+    var id_level = req.body.id_level;    
+
+    connection.query('DELETE FROM t_level WHERE id_level=?',
+    [id_level],
+
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Data Level Berhasil Dihapus", res);
+            }
+        });
+};
+
