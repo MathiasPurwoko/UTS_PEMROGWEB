@@ -19,4 +19,7 @@ router.get('/api/v1/rahasia1', verifikasi(), auth.halamanrahasia1);
 
 router.post('/api/v1/inputuser',verifikasi(), auth.registrasi);
 
+
+router.put('/api/v1/ubahmontir',verifikasiadmin(), auth.ubahmontir);
+
 module.exports = router;
