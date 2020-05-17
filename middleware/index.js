@@ -26,4 +26,7 @@ router.put('/api/v1/ubahlevel',verifikasiadmin(), auth.ubahlevel);
 router.put('/api/v1/ubahservis',verifikasiadmin(), auth.ubahservis);
 router.put('/api/v1/ubahuser',verifikasiadmin(), auth.ubahuser);
 
+
+router.delete('/api/v1/hapussparepart',verifikasiadmin(), auth.hapussparepart);
+
 module.exports = router;
