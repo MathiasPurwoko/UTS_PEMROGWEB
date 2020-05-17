@@ -36,4 +36,7 @@ module.exports = function(app) {
     app.route('/hapussparepart')
         .delete(jsonku.hapusSparepart);
 
+    app.route('/tambahservice')
+        .post(jsonku.tambahservice);
+
 } 
