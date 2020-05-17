@@ -10,6 +10,7 @@ router.post('/api/v1/register', auth.registrasi);
 router.post('/api/v1/login', auth.login);
 
 
+router.get('/api/v1/totalservis', auth.totalservis);
 
 
 //alamat yang perlu otorisasi
