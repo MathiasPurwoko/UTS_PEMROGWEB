@@ -30,7 +30,7 @@ router.put('/api/v1/ubahuser',verifikasiadmin(), auth.ubahuser);
 router.delete('/api/v1/hapussparepart',verifikasiadmin(), auth.hapussparepart);
 router.delete('/api/v1/hapusmontir',verifikasiadmin(), auth.hapusmontir);
 router.delete('/api/v1/hapuslevel',verifikasiadmin(), auth.hapuslevel);
-
+router.delete('/api/v1/hapususer',verifikasiadmin(), auth.hapususer);
 
 
 
