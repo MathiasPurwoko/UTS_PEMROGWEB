@@ -17,4 +17,6 @@ router.get('/api/v1/totalservis', auth.totalservis);
 router.get('/api/v1/rahasia', verifikasi(), auth.halamanrahasia);
 router.get('/api/v1/rahasia1', verifikasi(), auth.halamanrahasia1);
 
+router.post('/api/v1/inputuser',verifikasi(), auth.registrasi);
+
 module.exports = router;

@@ -113,3 +113,38 @@ exports.totalservis = function (req, res) {
     )
 
 }  
+
+//controller untuk input data user
+exports.inputuser = function(req, res) {
+    var post = {
+        nama_user: req.body.nama_user,
+        email: req.body.email,
+        password: req.body.password
+    }
+
+    var query = "SELECT nama_user FROM ?? WHERE ??=?";
+    var table = ["t_user", "nama_user", post.nama_user];
+
+    query = mysql.format(query,table);
+
+    connection.query(query, function(error,rows){
+        if(error){
+            console.log(error);
+        }else{
+            if(rows.length == 0){
+                var query = "INSERT INTO ?? SET ?";
+                var table = ["t_user"];
+                query = mysql.format(query,table);
+                connection.query(query, post, function(error, rows){
+                    if(error){
+                        console.log(error);
+                    }else{
+                        response.ok("Berhasil menambahkan data User baru", res);
+                    }
+                });
+            }else{
+                response.ok("User sudah terdaftar!",res);
+            }
+        }
+    });
+};  
