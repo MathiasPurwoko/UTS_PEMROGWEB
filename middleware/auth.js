@@ -221,3 +221,23 @@ exports.ubahservis = function (req, res) {
             }
         });
 };  
+
+//ubah user
+exports.ubahuser = function (req, res) {
+    var id_user = req.body.id_user;
+    var nama_user = req.body.nama_user;
+    var email = req.body.email;    
+    var password = req.body.password;
+    var level = req.body.level;
+
+    connection.query('UPDATE t_user SET nama_user=?,email=?,password=?,level=? WHERE id_user=?',
+    [nama_user,email,password,level,id_user],
+
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Data User Berhasil Diubah", res);
+            }
+        });
+};

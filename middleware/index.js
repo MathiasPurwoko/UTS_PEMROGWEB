@@ -24,6 +24,6 @@ router.put('/api/v1/ubahmontir',verifikasiadmin(), auth.ubahmontir);
 router.put('/api/v1/ubahsparepart',verifikasiadmin(), auth.ubahsparepart);
 router.put('/api/v1/ubahlevel',verifikasiadmin(), auth.ubahlevel);
 router.put('/api/v1/ubahservis',verifikasiadmin(), auth.ubahservis);
-
+router.put('/api/v1/ubahuser',verifikasiadmin(), auth.ubahuser);
 
 module.exports = router;
